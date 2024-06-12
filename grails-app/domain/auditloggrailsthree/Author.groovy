@@ -13,8 +13,11 @@ class Author implements Auditable {
 
     static hasMany = [books: Book];
 
+    /*
     static mapping = {
         books joinTable: [name: "author_book_matrix", key: 'author_id']
-    }
+    }'
+
+     */
 
 }

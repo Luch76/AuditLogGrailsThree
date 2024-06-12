@@ -26,11 +26,16 @@ class AuthorService {
         //book.save(failOnError: true);
 
         /*
+
         for (Integer booksIndex = (authorLuch?.books?.size() ?: 0) - 1; booksIndex >= 0; booksIndex--) {
             authorLuch.books[booksIndex].delete();
             authorLuch.books.remove(booksIndex);
         }
         authorLuch.delete();
-        */
+
+         */
+        
+        authorLuch.delete();
+
     }
 }
