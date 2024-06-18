@@ -35,7 +35,7 @@ class AuthorService {
 
          */
         
-        authorLuch.delete();
+        // authorLuch.delete();
 
     }
 }

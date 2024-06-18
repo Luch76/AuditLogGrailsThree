@@ -13,5 +13,6 @@ out/
 
 grails-app/conf/application.groovy
 devNpiDB.mv.db
+devNpiDB.trace.db
 
 

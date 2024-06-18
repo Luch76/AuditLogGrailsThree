@@ -15,10 +15,4 @@ class Book implements Auditable {
     static belongsTo = Author
     static hasMany = [authors: Author]
 
-    /*
-    static mapping = {
-        authors joinTable: [name: "author_book_matrix", key: 'book_id' ]
-    }
-
-     */
 }
