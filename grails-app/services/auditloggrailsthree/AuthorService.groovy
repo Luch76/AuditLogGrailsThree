@@ -8,22 +8,26 @@ class AuthorService {
     def serviceMethod() {
         Author authorLuch, authorSteve;
         Book book;
+        Tag tagScifi, tagFantasy;
 
-        authorLuch = new Author(name: "Luch");
-        //authorSteve = new Author(name: "Luch");
+        tagScifi = new Tag(tag: "scifi").save(failOnError: true);
+        tagFantasy = new Tag(tag: "fantasy").save(failOnError: true);
 
-        book = new Book(title: "Alpha");
+        authorLuch = new Author(name: "Luch").save(failOnError: true);
+
+        book = new Book(title: "Alpha").save(failOnError: true);
         authorLuch.addToBooks(book);
-        //authorSteve.addToBooks(book);
-        book = new Book(title: "Beta");
+        book = new Book(title: "Beta").save(failOnError: true);
         authorLuch.addToBooks(book);
-        //authorSteve.addToBooks(book);
-
         authorLuch.save(failOnError: true);
-        //authorSteve.save(failOnError: true);
+        book = new Book(title: "Gamma").save(failOnError: true);
 
-        //book = new Book(title: "Indie");
-        //book.save(failOnError: true);
+        /*
+        book = new Book(title: "Beta").save(failOnError: true);
+        authorLuch.books.add(book);
+        authorLuch.save(failOnError: true);
+        */
+
 
         /*
 
