@@ -5,6 +5,22 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class AuthorService {
 
+    def aircraft() {
+        Aircraft aircraft = new Aircraft(ac: "A01").save(failOnError: true);
+        PartMaster partMaster = new PartMaster(partNumber: "P01").save(failOnError: true);
+
+        AircraftsParts aircraftsParts = new AircraftsParts();
+        aircraftsParts.aircraft = aircraft;
+        aircraftsParts.partMaster = partMaster;
+        aircraftsParts.save(failOnError: true);
+    }
+
+    Aircraft getAircraft() {
+        Aircraft aircraft = Aircraft.get(1);
+        log.info("aircraft: " + aircraft.ac);
+        return aircraft;
+    }
+
     def serviceMethod() {
         Author authorLuch, authorSteve;
         Book book;
